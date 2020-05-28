@@ -1,0 +1,69 @@
+1.作用域范围? （局部变量和全局变量）
+2.函数的闭包是什么？（函数内在包含子函数，并最终return子函数。）
+3.数据类型有哪些？（六大数据类型：string、number、undefined、object、null、boolean（布尔值））
+4.什么是深拷贝什么是浅拷贝，二者有什么区别？ （拷贝不彻底）
+5.什么是行内元素，什么是块级元素，常见的行内和块级标签有哪些？
+6.数组的去重方法？（var arr2 = Array.form(new set(arr))）
+7.数组的排序方法？ (arr.sotr(function(x,y){ return x-y}))
+8.H5新特性有哪些？
+9.css3新特性有哪些？
+10.99乘法表开发
+11.http和https区别是什么? (安全与不安全的区别)
+12.vue的特点和优点 （组件化开发，数据渲染操作节点，轻量级团队开发，双向数据绑定）
+13.v-if和v-show的区别 （v-if删除隐藏，v-show隐藏不删除）
+14.vue的生命周期顺序 （beforeCreate beforeMount beforeUpdate beforeDestroy）
+15.vuex是什么？（是Vue的状态管理模式。）
+16.对于MVVM的理解？（M（数据层） V（视图层） VM（view-model）视图模型层）用来连接（数据层）（视图层））
+ 17.vue双向数据绑定原理：vue是结合数据劫持和发布订阅者模式来实现双向数据绑定的,当要读取数据的时候会自动触发方法，并且会被赋值
+16.vue路由跳转及传参
+17.行内元素和块级元素的区别是什么？行内元素的padding和margin可设置么？
+	答案：块级元素总是独占一行。width，height，padding，margin都可以控制。
+	行内元素和相邻的行内元素在同一行，width，height与padding-top,padding-bottom,还有margin-top,margin-bottom不可控制，其余可控制。
+18.rgba()和opacity的透明效果有什么不同？（rgba不改变文字的透明度）
+19.请描述display:none；visibility:hidden；opacity:0;三者的区别；（删除隐藏、隐藏不删除）
+20.请讲一下px，em的区别。
+	答案：px和em都是长度单位。但是px是固定的，指定多少就是多少。em是根据父级元素的大小变化的。
+	拓展：浏览器默认字体大小是16px。所以未经调整的浏览器都符合：1em=16px这个计算规则。
+21.对WEB标准以及W3C的理解与认识。
+	答案：标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、
+	内容能被更多的用户所访问、能被更多的设备所访问、更少的代码和组件，容易维护、改版方便，不需要变动页面内容、
+	提供打印版本而不需要复制内容、提高网站易用性。
+22.前端页面有哪三层构成？分别是什么？作用是什么？
+23.“ i++ ” 和 “ ++i ”的区别。
+	答案：i++是先引用i的值而后将i递增1。
+	++i是先将i的值加1而后引用它的值。
+24.更改this的指向 
+25.document.load和jquery.ready的区别。
+	Document.onload:它是在结构和样式加载完才执行js。【就是在html和css都完事以后才执行】
+	Window.onload:它不仅仅要在结构和样式加载完，还要执行完所有的样式、图片这些资源文件，全部加载完才会触发window.onload事件。
+	jquery中的ready指定在DOM完全加载时要执行的函数。
+26.Iframe介绍：
+	它的优点：
+	解决加载缓慢的第三方内容，如图标和广告等的加载问题
+	Security sandbox 【安全的一个小盒子】
+	并行加载脚本
+	它的缺点：
+	iframe会阻塞主页面的onload事件
+	即使内容为空，加载也需要时间
+	没有语意
+27.async，promise，settimeout的执行顺序
+	async function async1() {
+   		console.log('async1 start')
+   		await async2()
+   		console.log('async1 end')
+	}
+	async function async2() {
+   		console.log('async2')
+	}
+	console.log('script start')
+	setTimeout(() => {
+		console.log('setTimeout')
+	},0)
+	async1()
+	new Promise((resolve) => {
+		console.log('promise1')
+		resolve()
+	}).then(() => {
+		console.log('promise2')
+	})
+	console.log('script end')
